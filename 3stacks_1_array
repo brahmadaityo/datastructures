@@ -1,0 +1,111 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define max_size 1000
+void push(int *arr,int *top )
+{
+int val;
+if(*top == max_size-1){
+	printf("your array containing the stack is full\n");
+	return;
+	}
+else {
+	printf("the numebr you want to push into the stack\n");
+	scanf("%d",&val);
+	*top = (*top)+3;
+	arr[*top]=val;
+	printf("the element pushed is %d\n",arr[*top]);
+	return;
+	}
+}
+void pop(int *arr,int *top)
+{
+int temp;
+if(*top == -2 || *top == -3 || *top == -1){
+printf("your stack is empty\n");
+return;
+	}
+else{
+	temp = arr[*top];
+	*top = (*top)-3;
+	printf("the poppped element is %d\n",temp);
+	return;
+	}
+}
+void display(int *arr,int top)
+{
+int i;
+for(i = top ;i >= 0 ;i=i-3);
+{
+printf("%d\n",arr[i]);
+}
+return;
+}
+
+int main()
+{
+int masterarray[max_size];
+int top1 = -3,top2 = -2 ,top3 = -1;
+int i,choice;
+while(1){
+start:
+	printf("enter 1/2/3 the stack number you want to do operation or 4 for exit\n");
+	scanf("%d",&i);
+	switch(i)
+	{
+	case 1:{
+		printf("enter 1/2/3/4 for push,pop,display,for another stack\n");
+		scanf("%d",&choice);
+		switch(choice)
+		{
+		case 1: push(masterarray,&top1);break;
+		case 2: pop(masterarray,&top1);break;
+		case 3: display(masterarray,top1);break;
+		case 4: goto start;break;
+		}
+		break;
+	}
+	case 2:{
+		printf("enter 1/2/3/4 for push,pop,display,for another stack\n");
+		scanf("%d",&choice);
+		switch(choice)
+		{
+		case 1: push(masterarray,&top2);break;
+		case 2: pop(masterarray,&top2);break;
+		case 3: display(masterarray,top2);break;
+		case 4: goto start;break;
+		}
+		break;
+	}
+	case 3:{
+		printf("enter 1/2/3/4 for push,pop,display,for another stack\n");
+		scanf("%d",&choice);
+		switch(choice)
+		{
+		case 1: push(masterarray,&top3);break;
+		case 2: pop(masterarray,&top3);break;
+		case 3: display(masterarray,top3);break;
+		case 4: goto start;break;
+		}
+		break;
+	}
+	case 4:{
+		exit(0);
+		break;
+	} 
+	
+	}
+  }
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
