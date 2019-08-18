@@ -58,19 +58,27 @@ int stack1[max_size];
 int stack2[max_size];
 int stack3[max_size];
 int n;
-printf("enter how many number you want to put into each stack\n");
-scanf("%d",&n);
-for(i=0;i< n;i++)
+int flag =1;
+while(flag)
 {
-printf("enter in stack 1\n");
-scanf("%d",&j);
-push(stack1,j,&top1);
-printf("enter in stack 2\n");
-scanf("%d",&j);
-push(stack2,j,&top2);
-printf("enter in stack 3\n");
-scanf("%d",&j);
-push(stack3,j,&top3);
+printf("press 1/2/3/4 for stack 1,stack2,stack3 & complete\n");
+scanf("%d",&n);
+switch(n)
+{
+ 	case 1:printf("enter your input in stack 1\n");
+ 		   scanf("%d",&i);
+ 		   push(stack1,i,&top1);
+ 		   break;
+ 	case 2:printf("enter your input in stack 2\n");
+ 		   scanf("%d",&i);
+ 		   push(stack2,i,&top2);
+ 		   break;
+ 	case 3:printf("enter your input in stack 3\n");
+ 		   scanf("%d",&i);
+ 		   push(stack3,i,&top3);
+ 		   break;
+ 	case 4: flag = 0;break;
+}
 }
 while(top2 > -1 || top3 > -1)
 {
@@ -84,5 +92,4 @@ printf("|%d|\n",pop(stack2,&top2));
 }
 
 }
-
 
