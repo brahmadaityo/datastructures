@@ -6,6 +6,7 @@ typedef struct linkedlist{
 	struct linkedlist *next;
 	struct linkedlist *prev;
 }LL;
+//doubly linked list using cmd line
 void insert(LL **list,char *str)
 {
 	LL *temp,*prev2 = NULL,*temp2=NULL;
