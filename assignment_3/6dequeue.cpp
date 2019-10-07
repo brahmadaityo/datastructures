@@ -50,6 +50,7 @@ void insertbegin(LL **list,int k)
 	*list = temp;
 	}
 }
+////////////////////////////
 int deletefront(LL **list)
 {
 int k;
@@ -73,6 +74,7 @@ last->next = (*list)->next;
 printf("deleted element was %d\n",k);
 return k;	
 }
+///////////////////////////////
 int deleteend(LL **list)
 {
 	int k;
@@ -104,6 +106,7 @@ int deleteend(LL **list)
 	
 		
 }
+/////////////////////////////////////
 void display(LL *list)
 {
 	LL *temp;
